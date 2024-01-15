@@ -13,6 +13,8 @@ body {
   grid-template-columns: repeat(3, 1f);
   grid-template-areas: "header header header" "content content content" "footer footer footer";
   grid-template-rows: 80px 1fr 190px;
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .container-btn {
@@ -26,10 +28,13 @@ body {
 }
 
 #header {
+  padding: 2px;
   grid-area: header;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
+  z-index: 1000;
 }
 #header .logo {
   margin-left: 165px;
@@ -54,8 +59,51 @@ body {
 #content {
   grid-area: content;
 }
-#content h1, #content h2 {
+#content h1,
+#content h2 {
   color: #2D314D;
+}
+#content #section-intro {
+  display: flex;
+  background-image: url("../images/bg-intro-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right -470px top -275px;
+  width: 100vw;
+}
+#content #section-intro .call-action {
+  margin-top: 170px;
+  margin-left: 165px;
+  position: absolute;
+  width: 447px;
+  height: 316px;
+}
+#content #section-intro .call-action h1 {
+  font-size: 56px;
+  width: 100%;
+  font-weight: 300;
+  line-height: 64px;
+  margin-right: 45px;
+  margin-bottom: 24px;
+}
+#content #section-intro .call-action p {
+  width: 440px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: -0.281px;
+  margin-bottom: 36px;
+}
+#content #section-intro .mockups {
+  position: relative;
+  top: -120px;
+  right: -737px;
+}
+#content #section-intro .mockups img {
+  background: transparent;
+  width: 100%;
+  max-width: 732px;
+  height: 901px;
 }
 
 footer {
