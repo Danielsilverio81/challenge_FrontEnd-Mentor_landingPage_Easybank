@@ -4,15 +4,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Pagina feita para o desafio do front-end Mentor">
+  <meta name="description" content="Pagina feita para o desafio do front-end Mentor" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;700&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicon-32x32.png" />
-
+  <link rel="stylesheet" href="src/css/style.css" />
   <title>Frontend Mentor | Easybank landing page</title>
 </head>
 
 <body>
-  <header>
+  <header id="header">
     <div class="logo">
       <img src="./src/images/logo.svg" alt="Logo" />
     </div>
@@ -30,7 +33,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="content">
     <section>
       <h1>Next generation digital banking</h1>
       <p class="info call-info">
@@ -162,9 +165,11 @@
     </section>
   </main>
 
-  <footer>
+  <footer id="footer">
     <div class="container-footer">
-      <div class="logo"><img src="src/images/logo.svg" alt="logo image"></div>
+      <div class="logo">
+        <img src="src/images/logo.svg" alt="logo image" />
+      </div>
       <div class="container-social-media">
         <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
             <path fill="#FFF"
@@ -199,18 +204,16 @@
       </div>
       <button class="container-btn">Request Invite</button>
       <p>
-        <span>
-          © Easybank. All Rights Reserved
-        </span>
+        <span> © Easybank. All Rights Reserved </span>
       </p>
     </div>
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
-        href="#">Your
-        Name Here</a>.
+        href="#">Your Name Here</a>.
     </div>
   </footer>
+  <script src=""></script>
 </body>
 
 </html>
