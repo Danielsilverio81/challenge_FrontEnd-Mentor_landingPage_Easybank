@@ -11,7 +11,7 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1f);
-  grid-template-areas: "header header header" "content content content" "footer footer footer";
+  grid-template-areas: "header" "content" "footer";
   grid-template-rows: 80px 1fr 190px;
   overflow: hidden;
   overflow-y: scroll;
@@ -25,6 +25,7 @@ body {
   text-align: center;
   border: none;
   color: white;
+  cursor: pointer;
 }
 
 #header {
@@ -34,7 +35,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  z-index: 1000;
+  z-index: 1001;
 }
 #header .logo {
   margin-left: 165px;
@@ -63,6 +64,14 @@ body {
 #content h2 {
   color: #2D314D;
 }
+#content .info {
+  width: 440px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: -0.281px;
+  margin-bottom: 36px;
+}
 #content #section-intro {
   display: flex;
   background-image: url("../images/bg-intro-desktop.svg");
@@ -72,8 +81,8 @@ body {
   width: 100vw;
 }
 #content #section-intro .call-action {
-  margin-top: 170px;
-  margin-left: 165px;
+  margin-top: 160px;
+  margin-left: 90px;
   position: absolute;
   width: 447px;
   height: 316px;
@@ -86,24 +95,74 @@ body {
   margin-right: 45px;
   margin-bottom: 24px;
 }
-#content #section-intro .call-action p {
-  width: 440px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 28px;
-  letter-spacing: -0.281px;
-  margin-bottom: 36px;
-}
 #content #section-intro .mockups {
   position: relative;
   top: -120px;
   right: -737px;
+  z-index: 990;
 }
 #content #section-intro .mockups img {
   background: transparent;
   width: 100%;
   max-width: 732px;
   height: 901px;
+}
+#content #about {
+  background-color: #F4F5F7;
+  position: absolute;
+  top: 700px;
+  right: 30px;
+  height: 676px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#content #about h2,
+#content #about .about-info {
+  margin: 96px 0px 16px 90px;
+}
+#content #about h2 {
+  font-size: 40px;
+}
+#content #about .about-info {
+  margin-top: 0px;
+  width: 635px;
+}
+#content #about .container-aboutCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0px 30px;
+  margin: 70px 119px 0px 100px;
+}
+#content #about .container-aboutCards .info-bankCard {
+  height: 278px;
+  width: 100%;
+  max-width: 256px;
+}
+#content #about .container-aboutCards .info-bankCard .content-aboutCards {
+  width: 255px;
+  height: 166px;
+}
+#content #about .container-aboutCards .info-bankCard .content-aboutCards .icon {
+  width: 100%;
+  max-width: 72px;
+  height: 72px;
+  margin-bottom: 14px;
+}
+#content #about .container-aboutCards .info-bankCard .content-aboutCards .icon img {
+  width: 100%;
+  height: auto;
+}
+#content #about .container-aboutCards .info-bankCard .content-aboutCards h3 {
+  color: #2D314D;
+  font-weight: 300;
+  margin: 26px 0px;
+}
+#content #about .container-aboutCards .info-bankCard .content-aboutCards p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.25px;
 }
 
 footer {
