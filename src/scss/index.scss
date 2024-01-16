@@ -58,13 +58,13 @@ body {
             a {
                 border: none;
                 color: lib.$font-color;
-                font-weight: 400;
+                font-weight: lib.$heavy;
                 text-decoration: none;
             }
         }
     }
 
-    .invicte-area {
+    .invited-area {
         margin-right: 165px;
     }
 }
@@ -80,7 +80,7 @@ body {
     .info {
         width: 440px;
         font-size: lib.$fontNormal;
-        font-weight: 400;
+        font-weight: lib.$heavy;
         line-height: 28px;
         letter-spacing: -0.281px;
         margin-bottom: 36px;
@@ -104,7 +104,7 @@ body {
             h1 {
                 font-size: lib.$fontH1;
                 width: 100%;
-                font-weight: 300;
+                font-weight: lib.$medium;
                 line-height: 64px;
                 margin-right: 45px;
                 margin-bottom: 24px;
@@ -133,8 +133,7 @@ body {
         right: 30px;
         height: 676px;
         width: 100%;
-        display: flex;
-        flex-direction: column;
+        @include lib.d-flex(flex, column);
 
         h2,
         .about-info {
@@ -151,8 +150,7 @@ body {
         }
 
         .container-aboutCards {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            @include lib.d-grid(grid, repeat(4, 1fr));
             gap: 0px 30px;
             margin: 70px 119px 0px 100px;
 
@@ -186,7 +184,7 @@ body {
 
                     p {
                         font-size: 16px;
-                        font-weight: 400;
+                        font-weight: lib.$heavy;
                         line-height: 26px;
                         letter-spacing: -0.25px;
                     }
@@ -204,14 +202,13 @@ body {
         .title-articles-container {
             font-size: lib.$fontH2;
             letter-spacing: -0.714px;
-            font-weight: 300;
+            font-weight: lib.$medium;
             margin-bottom: 5px;
             color: lib.$secondary;
         }
         .container-lastest-articles {
             height: 395px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            @include lib.d-grid(grid, repeat(4, 1fr));
             align-items: center;
             justify-content: center;
             gap: 0px 30px;
@@ -221,8 +218,7 @@ body {
                 background: #FFF;
                 border-radius: 5px;
                 max-width: 255px;
-                display: flex;
-                flex-direction: column;
+                @include lib.d-flex(flex, column);
                 align-items: center;
                 justify-content: center;
 
@@ -240,28 +236,27 @@ body {
                 }
 
                 .container-info-articles {
-                    display: flex;
+                    @include lib.d-flex(flex, column);
                     width: 207px;
-                    flex-direction: column;
                     align-items: flex-start;
                     justify-content: center;
                     gap: 8px;
                     h3 {
                         margin-top: 25px;
                         font-size: 10px;
-                        font-weight: 400;
+                        font-weight: lib.$heavy;
                     }
 
                     strong {
                         font-size: 16px;
-                        font-weight: 300;
+                        font-weight: lib.$medium;
                         color: lib.$secondary;
                     }
 
                     p {
                         height: 72px;
                         font-size: 13px;
-                        font-weight: 400;
+                        font-weight: lib.$heavy;
                         letter-spacing: -0.203px;
                     }
                 }
@@ -288,8 +283,7 @@ footer {
         }
 
         .group1, .container-links-group, .group3 {
-            display: flex;
-            flex-direction: column;
+           @include lib.d-flex(flex, column);
         }
     
         .group2 {
@@ -325,4 +319,10 @@ footer {
     font-size: 11px;
     text-align: center;
     margin: 15px;
+
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        color: whitesmoke;
+    }
 }

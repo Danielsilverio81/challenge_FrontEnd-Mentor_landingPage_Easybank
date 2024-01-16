@@ -56,7 +56,7 @@ body {
   font-weight: 400;
   text-decoration: none;
 }
-#header .invicte-area {
+#header .invited-area {
   margin-right: 165px;
 }
 
@@ -210,8 +210,8 @@ body {
 }
 #content #articles .container-lastest-articles .container-articles .container-info-articles {
   display: flex;
-  width: 207px;
   flex-direction: column;
+  width: 207px;
   align-items: flex-start;
   justify-content: center;
   gap: 8px;
@@ -277,6 +277,11 @@ footer .container-footer .group3 .container-btn {
   font-size: 11px;
   text-align: center;
   margin: 15px;
+}
+.attribution a {
+  text-decoration: none;
+  cursor: pointer;
+  color: whitesmoke;
 }
 
 /*# sourceMappingURL=style.css.map */

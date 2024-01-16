@@ -1,0 +1,4 @@
+@mixin d-grid($display, $templateColum) {
+    display: $display;
+    grid-template-columns: $templateColum;
+}
