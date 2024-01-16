@@ -54,8 +54,9 @@ body {
 
         li {
             list-style: none;
-
+            border: none;
             a {
+                border: none;
                 color: lib.$font-color;
                 font-weight: 400;
                 text-decoration: none;
@@ -270,5 +271,58 @@ body {
 }
 
 footer {
+    height: 191px;
+    background-color: lib.$secondary;
     grid-area: footer;
+    
+    .container-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .group1 {
+            .logo {
+                margin-top: 48px;
+                margin-bottom: 56px;
+            }
+        }
+
+        .group1, .container-links-group, .group3 {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .group2 {
+            margin-top: 49px;
+            display: flex;
+            gap: 0px 80px;
+
+            .container-links-group {
+                gap: 20px 30px; 
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+
+        .group3 {
+            width: 220px;
+            height: 94px;
+            margin-top: 48px;
+            .container-btn {
+                margin: 0px 0px 24px 57px;
+            }
+        }
+    }
+    
+
+}
+
+.attribution {
+    width: 400px;
+    font-size: 11px;
+    text-align: center;
+    margin: 15px;
 }
