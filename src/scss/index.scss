@@ -74,41 +74,41 @@ body {
         display: flex;
         align-items: center;
         gap: 5px 30px;
-      
+
         li {
-          list-style: none;
-          border: none;
-          position: relative;
-      
-          a {
+            list-style: none;
             border: none;
-            color: lib.$font-color;
-            font-weight: lib.$heavy;
-            text-decoration: none;
             position: relative;
-      
-            &:hover {
-              color: lib.$secondary;
-      
-              &:after {
-                transform: scaleX(1);
-              }
+
+            a {
+                border: none;
+                color: lib.$font-color;
+                font-weight: lib.$heavy;
+                text-decoration: none;
+                position: relative;
+
+                &:hover {
+                    color: lib.$secondary;
+
+                    &:after {
+                        transform: scaleX(1);
+                    }
+                }
+
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    bottom: -29px;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background: lib.$linear;
+                    transform: scaleX(0);
+                    transform-origin: bottom right;
+                    transition: transform 0.3s ease-in-out;
+                }
             }
-      
-            &:after {
-              content: '';
-              display: block;
-              position: absolute;
-              bottom: -29px;
-              left: 0;
-              width: 100%;
-              height: 2px; 
-              background: lib.$linear; 
-              transform: scaleX(0); 
-              transform-origin: bottom right;
-              transition: transform 0.3s ease-in-out; 
-            }
-          }
         }
 
         @include lib.breakpoint(mobile) {
@@ -325,6 +325,13 @@ body {
                 font-size: 32px;
                 font-weight: lib.$medium;
                 letter-spacing: -0.571px;
+            }
+
+            .about-info {
+                width: 327px;
+                font-size: 15px;
+                font-weight: lib.$heavy;
+                letter-spacing: -0.234px;
             }
 
             p {
@@ -646,4 +653,4 @@ footer {
 
 #footer .container-social-media a:hover .hover-effect {
     fill: lib.$primary;
-  }
+}
